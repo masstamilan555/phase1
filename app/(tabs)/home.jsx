@@ -1,58 +1,73 @@
 import {
-    View,
-    Text,
-    TouchableOpacity,
-    ImageBackground,
-    Image,
-    StatusBar,
-    TextInput,
-  } from "react-native";
-  import { SafeAreaView } from "react-native-safe-area-context";
-  
-  import rootBg from "../../assets/Rootbg.png";
-  import bullock from "../../assets/bullock.webp";
-  import { useState } from "react";
-  import FontAwesome from '@expo/vector-icons/FontAwesome';
-  
-  export default function HomeTab() {
-    const [text, settext] = useState("");
-  
-    return (
-      <SafeAreaView className="">
-        <ImageBackground
-          className="w-full h-full"
-          source={rootBg}
-          resizeMode="cover"
-        >
-          <View className="flex justify-center items-center mt-[40px]">
-            <Image source={bullock} resizeMode="contain" className="w-40 h-40" />
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  StatusBar,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+import rootBg from "../../assets/rootbg.png";
+import category from "../../assets/category1.jpg"
+import { Link, router } from "expo-router";
+
+export default function HomeTab() {
+
+  return (
+    <SafeAreaView className="w-[100vw] h-[100vh]">
+      <ImageBackground
+        className="w-full h-full"
+        source={rootBg}
+        resizeMode="cover"
+      >
+
+        <Text className="text-2xl font-bold text-center  mt-16">Shop by Category</Text>
+        
+        <View className="flex items-center mt-10">
+          <View className="w-[80vw] h-12 px-4 mt-3 ">
+            <TextInput
+              className="flex-1 text-white border  border-[#CECECE]  rounded-full shadow shadow-orange-300 pl-5 pr-5 font-psemibold text-base"
+
+              placeholder="Search products"
+              placeholderTextColor="#7B7B8B"
+            />
+
           </View>
-  
-          <Text className="text-4xl font-bold text-center">Create Account</Text>
-          <View className="flex items-center">
-            <View className="w-[80vw] h-12 px-4 mt-5 shadow-2xl shadow-black ">
-              <TextInput
-                className="flex-1 text-white border border-[#CECECE]  rounded-full  pl-5 pr-5 font-psemibold text-base"
-                value={text}
-                placeholder="Enter Email"
-                placeholderTextColor="#7B7B8B"
-              />
+
+        </View>
+
+
+        <View className="flex items-center justify-evenly  gap-5  ">
+          <View className="flex  justify-between flex-row  gap-2">
+            <Link href="/product">
+            <View className=" w-[180px] h-[250px]  rounded-3xl border flex flex-col items-center justify-center    border-cyan-400">
+              <Image source={category} resizeMode="contain" className="w-[90%]  h-[100px] border   " />
+              <Text className="text-xl font-semibold  ">Vegetables</Text>
             </View>
+            </Link>
+            <View className=" w-[180px] h-[250px]  rounded-3xl border flex flex-col items-center justify-center    border-cyan-400">
+              <Image source={category} resizeMode="contain" className="w-[90%]  h-[100px] border   " />
+              <Text className="text-xl font-semibold  ">Vegetables</Text>
+            </View>
+
           </View>
-          <View className="flex items-center" >
-            <TouchableOpacity className="w-[80vw] h-10 px-4 mt-5 bg-[#66D4E7] rounded-full">
-              <View className="flex flex-row justify-end">
-              <Text className="text-center text-2xl pt-2 font-extrabold pr-[100px]">NEXT </Text>
-              <View className="mt-2">
-              <FontAwesome size={28} name="arrow-right" />
-              </View>
-              </View>
-              
-            </TouchableOpacity>
+          <View className="flex  justify-between flex-row gap-2 ">
+            <View className=" w-[180px] h-[250px]  rounded-3xl border flex flex-col items-center justify-center    border-cyan-400">
+              <Image source={category} resizeMode="contain" className="w-[90%]  h-[100px] border   " />
+              <Text className="text-xl font-semibold  ">Vegetables</Text>
+            </View>
+            <View className=" w-[180px] h-[250px]  rounded-3xl border flex flex-col items-center justify-center    border-cyan-400">
+              <Image source={category} resizeMode="contain" className="w-[90%]  h-[100px] border   " />
+              <Text className="text-xl font-semibold  ">Vegetables</Text>
+            </View>
+
           </View>
-        </ImageBackground>
-        <StatusBar backgroundColor="#161622" style="light" />
-      </SafeAreaView>
-    );
-  }
-  
+        </View>
+      </ImageBackground>
+      <StatusBar backgroundColor="#161622" style="light" />
+    </SafeAreaView>
+
+  );
+}

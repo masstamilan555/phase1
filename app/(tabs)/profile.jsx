@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import rootBg from "../../assets/Rootbg.png";
+import rootBg from "../../assets/rootbg.png";
 import bullock from "../../assets/bullock.webp";
 import { useState } from "react";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -26,17 +26,62 @@ export default function HomeTab() {
         </View>
 
         <Text className="text-3xl font-bold text-center mt-[-20px]">Profile Management</Text>
-        
 
-        <Text className="text-xl text-gray-400 mt-7 ml-10">General</Text>
-        <View className="flex flex-col mt-3 ml-[-38px] ">
-          <View className="flex flex-row items-center justify-center"> 
-            <FontAwesome size={22} name="lock" />
-          <Text className="text-xl ml-4">Change password</Text>
+
+        <View className="flex  ml-10 mr-10">
+          <Text className="text-xl text-gray-400 mt-7">General</Text>
+          <View className="flex items-start ml-4 ">
+            <View className="flex flex-col  mt-5 ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="user-o" />
+                <Text className="text-xl ml-6">Profile</Text>
+              </View>
+            </View>
+            <View className="flex flex-col mt-5 ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="lock" />
+                <Text className="text-xl ml-6">Change password</Text>
+              </View>
+            </View>
+            <View className="flex flex-col mt-5  ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="globe" />
+                <Text className="text-xl ml-6">Set Language</Text>
+              </View>
+            </View>
           </View>
         </View>
-        
-        <Text className="text-xl text-gray-400 mt-7 ml-10">Others</Text>
+        <View className="flex ml-10 mr-10 ">
+          <Text className="text-xl text-gray-400 mt-5">Others</Text>
+          <View className="flex items-start ml-4 ">
+            <View className="flex flex-col  mt-5  ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="question" />
+                <Text className="text-xl ml-6">Help</Text>
+              </View>
+            </View>
+            <View className="flex flex-col mt-5 ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="phone" />
+                <Text className="text-xl ml-6">Contact Us</Text>
+              </View>
+            </View>
+            <View className="flex flex-col mt-5  ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="shield" />
+                <Text className="text-xl ml-6">Privacy Policy</Text>
+              </View>
+            </View>
+            <View className="flex flex-col mt-5 ">
+              <View className="flex flex-row items-center justify-center">
+                <FontAwesome size={22} name="sign-out" />
+                <Text className="text-xl ml-6">Logout</Text>
+              </View>
+            </View>
+          </View>
+          
+
+        </View>
       </ImageBackground>
       <StatusBar backgroundColor="#161622" style="light" />
     </SafeAreaView>

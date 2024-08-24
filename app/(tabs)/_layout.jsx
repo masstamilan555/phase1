@@ -5,7 +5,7 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
       <Tabs.Screen
-        name="index"
+        name="home"
         
         options={{
 
@@ -15,10 +15,19 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="create"
         options={{
-          title: 'Settings',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          title: 'Create',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="plus" color={color} />,
+          headerShown:false
+
+        }}
+      />
+      <Tabs.Screen
+        name="order"
+        options={{
+          title: 'Orders',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="shopping-cart" color={color} />,
           headerShown:false
 
         }}
@@ -32,6 +41,7 @@ export default function TabLayout() {
 
         }}
       />
+    
     </Tabs>
   );
 }
