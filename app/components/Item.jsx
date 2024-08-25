@@ -1,6 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import { Link, useNavigation, useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
 
 const Item = ({ name, url, price, quantity ,productId }) => {
  
@@ -8,7 +9,7 @@ const Item = ({ name, url, price, quantity ,productId }) => {
 
   return (
     <TouchableOpacity onPress={()=>{
-      navigation.navigate('product-detail',{...productId})
+      navigation.navigate('product-detail',[productId])
 
     }} className="mb-1 bg-[#F2E7B2] rounded-2xl ">
       <View className="w-[90vw] h-[100px] p-3 flex flex-row justify-between ">
