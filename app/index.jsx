@@ -5,7 +5,7 @@ import { router } from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 
-import rootBg from "../assets/rootbg.png";
+import rootBg from "../assets/rootbg.jpg";
 import farmerLogo from "../assets/farmer-logo.jpg"
 import bullock from "../assets/bullock.webp";
 

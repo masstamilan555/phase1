@@ -9,7 +9,7 @@ import {
   } from "react-native";
   import { SafeAreaView } from "react-native-safe-area-context";
   
-  import rootBg from "../../assets/rootbg.png";
+  import rootBg from "../../assets/rootbg.jpg";
   import bullock from "../../assets/bullock.webp";
   import { useState } from "react";
   import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -24,10 +24,7 @@ import { router } from "expo-router";
           source={rootBg}
           resizeMode="cover"
         >
-          <View className="flex justify-center items-center mt-[40px]">
-            <Image source={bullock} resizeMode="contain" className="w-40 h-40" />
-          </View>
-  
+          
           <Text className="text-4xl font-bold text-center">Create Account</Text>
           <View className="flex items-center">
             <View className="w-[80vw] h-12 px-4 mt-5 ">
