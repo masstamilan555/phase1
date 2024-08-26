@@ -29,7 +29,7 @@ export default function HomeTab() {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get(
-          "https://farmer-app-gjuq.onrender.com/api/product"
+          "https://farmerapp-6yifrbej.b4a.run/api/product"
         );
         setProducts(data.data);
         setLoading(false);
