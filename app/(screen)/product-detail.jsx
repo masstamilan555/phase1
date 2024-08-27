@@ -10,7 +10,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useEffect, useState } from "react";
-import tomato from "../../assets/Tomato.jpeg";
 import { useNavigation } from "expo-router";
 import { useRoute } from "@react-navigation/native";
 import axios from "axios";

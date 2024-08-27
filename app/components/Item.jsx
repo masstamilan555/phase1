@@ -11,7 +11,7 @@ const Item = ({ name, url, price, quantity ,productId }) => {
     <TouchableOpacity onPress={()=>{
       navigation.navigate('product-detail',[productId])
 
-    }} className="mb-1 bg-[#F2E7B2] rounded-2xl ">
+    }} className="mb-1 bg-[#A5D6A7] rounded-2xl ">
       <View className="w-[90vw] h-[100px] p-3 flex flex-row justify-between ">
         <View>
           <Text className="text-black text-2xl font-extrabold ">{name}</Text>

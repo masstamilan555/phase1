@@ -67,7 +67,8 @@ export default function FormWithDropdown() {
       const { data } = await axios.post(
         `https://farmerapp-6yifrbej.b4a.run/api/product`,requestData
       );
-      console.log(data);
+      Alert.alert("Item submitted Successfully");
+
       
     } catch (error) {
       console.error(error);
@@ -100,6 +101,7 @@ export default function FormWithDropdown() {
               backgroundColor: "#D9D9D9",
               zIndex: 10, // Ensures dropdown is on top
             }}
+            
             containerStyle={{
               marginBottom: 20,
             }}
