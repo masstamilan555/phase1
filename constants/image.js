@@ -28,8 +28,16 @@ const toordal = require("../assets/toordal.jpeg");
 const sundal = require("../assets/sundal.jpeg");
 const mongdal = require("../assets/mongdal.jpeg");
 const signupbg = require("../assets/signupbg.png");
+const signinbg = require("../assets/signinbg.png");
+const getstarted = require("../assets/getstarted.png");
+const forgetbg = require("../assets/forget.jpg");
+const frame1 = require("../assets/Frame.png");
 
 module.exports = {
+    frame1,
+    forgetbg,
+    getstarted,
+    signinbg,
     signupbg,
     getstart_logo,
     plain_bg,

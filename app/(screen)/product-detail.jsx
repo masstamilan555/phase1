@@ -19,6 +19,15 @@ export default function HomeTab() {
    const {params} =useRoute()
    const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [count , setCount] = useState(1)
+
+  const decrementCount = ()=>{
+    setCount(count-1)
+  }
+  const incrementCount = ()=>{
+    setCount(count+1)
+  }
    
   // Use useEffect to set the options after the component mounts
   useEffect(() => {
@@ -44,26 +53,28 @@ export default function HomeTab() {
 
   if (loading) {
     return (
-      <SafeAreaView className="w-full h-full bg-[#EFF5BE] flex items-center justify-center">
+      <SafeAreaView className="w-full h-full bg-[#E8F5E9] flex items-center justify-center">
         <ActivityIndicator size="large" color="#0000ff" />
       </SafeAreaView>
     );
   }
 
   return (
-    <SafeAreaView className="w-full h-full bg-[#EFF5BE] flex flex-col items-center">
+    <SafeAreaView className="w-full h-full bg-[#E8F5E9] flex flex-col items-center">
       <Text className="text-3xl font-extrabold text-center mt-10">Product Detail</Text>
-      <View className="flex flex-col items-center mt-10">
-        <View className="bg-[#F2E7B2] p-20 pt-10 pb-10 rounded-2xl shadow-xl shadow-black">
-          <View className="border border-gray-200 shadow-2xl shadow-gray-700 rounded-full">
+      <View className="flex flex-col items-center h-[100px] mt-10">
+        <View className="bg-[#A5D6A7] p-20 pt-10 pb-10 rounded-2xl shadow-xl shadow-black">
+          <View className=" shadow-2xl shadow-black rounded-full">
             <Image source={{ uri: product.image }} className="w-[200px] h-[200px] rounded-full" />
           </View>
-          <Text className="text-3xl font-bold text-center mt-10">{product.name}</Text>
+          <Text className="text-3xl font-bold text-center mt-5">{product.name}</Text>
         </View>
 
         <View className="ml-[220px] mt-[-18px]">
-          <Text className="bg-[#66D4E7] text-3xl w-20 h-7 rounded-full flex flex-col">
-            <Text className="text-2xl text-center"> -</Text> 5<Text className="text-2xl text-center">+</Text>
+          <Text className="bg-[#07C158] text-3xl w-16 h-7 rounded-full flex flex-col ">
+            <Text onPress={decrementCount} className="text-2xl text-center"> -</Text>
+             <Text>{count}</Text>
+             <Text onPress={incrementCount} className="text-2xl text-center">+</Text>
           </Text>
         </View>
 
@@ -87,16 +98,16 @@ export default function HomeTab() {
           <Text className="text-lg">
             Available : <Text>{product.quantity} Kg</Text>
           </Text>
-          <Text className="text-lg mt-2">
-            Price : <Text className="text-green-600 font-semibold text-4xl">₹{product.price} </Text><Text>per Kg</Text>
+          <Text className="text-lg mt-2 p-1">
+            Price : <Text className="text-green-600 font-semibold text-4xl ">₹{product.price} </Text><Text>per Kg</Text>
           </Text>
         </View>
         <View className="flex flex-row gap-2 mt-10">
-          <Text className="bg-[#66D4E7] p-3 text-center text-2xl font-bold w-[150px] h-[50px] rounded-2xl">
+          <Text className="bg-[#07C158] p-3 text-center text-white text-2xl font-bold w-[150px] h-[50px] rounded-2xl">
             Buy Now
           </Text>
-          <Text className="bg-[#66D4E7] w-[150px] h-[50px] text-center rounded-2xl">
-            <FontAwesome size={50} name="comments" />
+          <Text className="bg-[#07C158] w-[150px] h-[50px] text-center rounded-2xl">
+            <FontAwesome size={50} color="white" name="comments" />
           </Text>
         </View>
       </View>

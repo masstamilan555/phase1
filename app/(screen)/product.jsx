@@ -45,8 +45,8 @@ export default function HomeTab() {
     <SafeAreaView className="w-full h-full bg-[#E8F5E9]">
       <ScrollView>
         <Text className="text-3xl font-bold text-center mt-10">Vegetables</Text>
-        <View className="flex items-center mt-5 shadow-2xl shadow-blue-400 ">
-          <View className="w-[80vw] h-12 px-4 mt-3 flex flex-row items-center bg-white rounded-full pl-5 pr-5 font-psemibold ">
+        <View className="flex items-center mt-5  ">
+          <View className="w-[80vw] h-12 px-4 mt-3 flex flex-row items-center bg-white rounded-full pl-5 pr-5 font-semibold ">
             <FontAwesome size={22} name="search" />
             <TextInput
               className="flex-1 ml-10 text-black  text-2xl"
@@ -59,7 +59,7 @@ export default function HomeTab() {
 
         <View className="flex flex-col-reverse items-center mt-10 ">
           {loading ? (
-            <ActivityIndicator size="large" color="#0000ff" />
+            <ActivityIndicator size="large" color="#07C158" />
           ) : (
             products.map((product) => (
               <Item

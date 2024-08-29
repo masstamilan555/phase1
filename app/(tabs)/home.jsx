@@ -22,7 +22,7 @@ export default function HomeTab() {
       <View className="flex items-center mt-5">
         <View className="w-[100vw] h-12 px-4 mt-3 ">
           <TextInput
-            className="flex-1 text-white border  border-[#CECECE]  rounded-full shadow shadow-orange-300 pl-5 pr-5 font-psemibold text-base"
+            className="flex-1 text-white border bg-white  border-[#CECECE]  rounded-full shadow shadow-black pl-5 pr-5 font-psemibold text-base"
 
             placeholder="Search products"
             placeholderTextColor="#7B7B8B"

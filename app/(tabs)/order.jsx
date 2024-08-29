@@ -13,7 +13,7 @@ import Ordercard from "../components/ordercard";
 
 export default function HomeTab() {
   return (
-    <SafeAreaView className="w-[100vw] h-full bg-[#EFF5BE] ">
+    <SafeAreaView className="w-[100vw] h-full bg-[#E8F5E9] ">
       <ScrollView>
 
       <Text className="text-4xl text-center mt-20">Orders Details</Text>

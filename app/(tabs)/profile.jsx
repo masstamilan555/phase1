@@ -9,11 +9,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Link, router } from "expo-router";
 
 export default function HomeTab() {
 
   return (
-    <SafeAreaView className="bg-[#EFF5BE] w-full h-full">
+    <SafeAreaView className="bg-[#E8F5E9] w-full h-full">
       
   
 
@@ -26,7 +27,7 @@ export default function HomeTab() {
             <View className="flex flex-col  mt-6 ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="user-o" />
-                <Text className="text-xl ml-6">Personal Details</Text>
+                <Link href="/Dashboard" className="text-xl ml-6">Personal Details</Link>
               </View>
             </View>
             <View className="flex flex-col mt-6 ">
@@ -65,9 +66,9 @@ export default function HomeTab() {
               </View>
             </View>
             <View className="flex flex-col mt-6 ">
-              <View className="flex flex-row items-center justify-center">
+              <View  className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="sign-out" />
-                <Text className="text-xl ml-6">Logout</Text>
+                <Text onPress={()=>router.replace("/signin")} className="text-xl ml-6">Logout</Text>
               </View>
             </View>
           </View>

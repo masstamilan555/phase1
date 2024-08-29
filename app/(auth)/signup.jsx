@@ -5,24 +5,45 @@ import {
   ImageBackground,
   StatusBar,
   TextInput,
+  ScrollView,
+  Image,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { useState } from "react";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, router } from "expo-router";
 import { signupbg } from "../../constants/image";
+import { useMemo, useState } from "react";
+import { RadioGroup } from "react-native-radio-buttons-group";
 
 export default function HomeTab() {
+  const [selectedId, setSelectedId] = useState();
+
+  const radioButtons = useMemo(
+    () => [
+      {
+        id: "1", // acts as primary key, should be unique and non-empty string
+        label: "Customer",
+        value: "customer",
+      },
+      {
+        id: "2",
+        label: "Farmer",
+        value: "farmer",
+      },
+    ],
+    []
+  );
+
   return (
     <SafeAreaView className="">
-      <ImageBackground
-        className="w-full h-full"
-        source={signupbg}
-        resizeMode="cover"
-      >
-        <View className=" mt-[30vh]">
-          <View className="flex items-center border-2 border-[#CECECE] w-full h-[70vh] rounded-[40px] bg-[#E8F5E9]">
+      <ScrollView className="h-full">
+        <Image
+          className="w-full h-[35vh] "
+          source={signupbg}
+          resizeMode="cotain"
+        />
+        <View className=" -mt-5">
+          <View className="flex items-center border-t  border-[#CECECE] w-full h-[76vh] rounded-[30px] bg-[#E8F5E9]">
             <Text className="text-3xl text-center font-bold m-2">
               Create Account
             </Text>
@@ -42,7 +63,6 @@ export default function HomeTab() {
                 placeholderTextColor="black"
                 backgroundColor="white"
                 fontSize={18}
-
               />
             </View>
             <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
@@ -52,7 +72,6 @@ export default function HomeTab() {
                 placeholderTextColor="black"
                 backgroundColor="white"
                 fontSize={18}
-
               />
             </View>
             <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
@@ -62,7 +81,6 @@ export default function HomeTab() {
                 placeholderTextColor="black"
                 backgroundColor="white"
                 fontSize={18}
-
               />
             </View>
             <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw]">
@@ -72,10 +90,18 @@ export default function HomeTab() {
                 placeholderTextColor="black"
                 backgroundColor="white"
                 fontSize={18}
-
               />
             </View>
-            <Text className="text-3xl">Farmer or Customer beta</Text>
+
+            <View className="mt-3 ">
+              <RadioGroup
+                layout="row"
+                radioButtons={radioButtons}
+                onPress={setSelectedId}
+                selectedId={selectedId}
+              />
+            </View>
+
             <TouchableOpacity
               onPress={() => {
                 router.replace("/home");
@@ -92,7 +118,7 @@ export default function HomeTab() {
               <Text className="pr-5">
                 Already have an account{" "}
                 <Link
-                  href="/signup"
+                  href="/signin"
                   className="underline text-orange-500 text-lg ml-5"
                 >
                   Login
@@ -100,10 +126,9 @@ export default function HomeTab() {
               </Text>
             </View>
           </View>
-          
         </View>
-      </ImageBackground>
-      <StatusBar backgroundColor="#161622" style="light" />
+        <StatusBar backgroundColor="green" style="light" />
+      </ScrollView>
     </SafeAreaView>
   );
 }

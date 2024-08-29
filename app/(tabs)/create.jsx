@@ -50,7 +50,7 @@ export default function FormWithDropdown() {
 
   const handleSubmit = async () => {
     if (!selectedFruit || !selectedCategory) {
-      Alert.alert("Error", "Please select both a fruit and a category");
+      Alert.alert("Alert","Please fill all the details.");
       return;
     }
     const url = fruitUrlMap[selectedFruit];

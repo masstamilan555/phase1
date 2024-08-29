@@ -3,11 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { router } from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-
-
-import rootBg from "../assets/rootbg.jpg";
-import farmerLogo from "../assets/farmer-logo.jpg"
-import bullock from "../assets/bullock.webp";
+import { getstarted } from '../constants/image';
 
 
 const index = () => {
@@ -15,31 +11,26 @@ const index = () => {
     <SafeAreaView className="">
       <ImageBackground
         className="w-full h-full"
-        source={rootBg}
+        source={getstarted}
         resizeMode="cover"
       >
-        <View className="flex justify-center items-center mt-[40px]  ">
-          <Image source={bullock} resizeMode="contain" className="w-40 h-40" />
-        </View>
 
-        <Text className="text-3xl text-[#83A4D4] font-bold text-center">Welcome to fresh farm</Text>
+        <Text className="text-3xl mt-10 text-white font-bold text-center">Welcome to fresh farm</Text>
 
-        <View className="flex items-center rounded-xl   ">
-          <Image source={farmerLogo} resizeMode="contain" className="w-[80vw] h-[50vh]" />
 
-        </View>
-      
-        <View className="flex items-center " >
-          <TouchableOpacity onPress={()=>{
+
+        <View className="flex items-center justify-end " >
+          <TouchableOpacity onPress={() => {
             router.push("/signin")
-          }} className="w-[80vw] h-10 px-4 mt-5 bg-[#66D4E7] rounded-full">
+          }} className="w-[60vw] h-10 px-4 mt-[80vh] bg-[#07C158] rounded-full">
             <View className="flex flex-row justify-end">
-            <Text className=" text-2xl font-extrabold text-center mr-[60px] pt-1">Get Started</Text>
-            <View className="mt-2">
-            <FontAwesome size={28}  name="arrow-right" />
+              <Text className=" text-2xl font-extrabold text-center mr-[20px] pt-1 text-white">Get Started</Text>
+              <View className="p-3 pr-0 flex flex-row">
+                <FontAwesome size={18} name="chevron-right" />
+                <FontAwesome size={18} name="chevron-right" />
+              </View>
             </View>
-            </View>
-            
+
           </TouchableOpacity>
         </View>
       </ImageBackground>
