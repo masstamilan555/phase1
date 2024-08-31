@@ -9,7 +9,7 @@ const Category = (prop) => {
     <Link href="/product">
     <View className=" w-[180px] h-[180px] rounded-3xl border flex flex-col items-center bg-white  justify-center  border-[#A9A5A5]">
       <Image source={prop.img} resizeMode="contain" className="w-full h-[100px] border   " />
-      <Text className="text-xl font-semibold  ">{prop.name}</Text>
+      <Text className="text-xl font-pbold  ">{prop.name}</Text>
     </View>
     </Link>
   )

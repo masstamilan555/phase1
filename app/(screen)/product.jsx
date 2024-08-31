@@ -44,9 +44,9 @@ export default function HomeTab() {
   return (
     <SafeAreaView className="w-full h-full bg-[#E8F5E9]">
       <ScrollView>
-        <Text className="text-3xl font-bold text-center mt-10">Vegetables</Text>
+        <Text className="text-3xl font-pbold text-center mt-10">Vegetables</Text>
         <View className="flex items-center mt-5  ">
-          <View className="w-[80vw] h-12 px-4 mt-3 flex flex-row items-center bg-white rounded-full pl-5 pr-5 font-semibold ">
+          <View className="w-[85vw] h-10 px-4 mt-3 flex flex-row items-center bg-white rounded-full pl-5 pr-5 font-semibold ">
             <FontAwesome size={22} name="search" />
             <TextInput
               className="flex-1 ml-10 text-black  text-2xl"

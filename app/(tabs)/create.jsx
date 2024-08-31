@@ -49,7 +49,7 @@ export default function FormWithDropdown() {
   };
 
   const handleSubmit = async () => {
-    if (!selectedFruit || !selectedCategory) {
+    if (!selectedFruit || !selectedCategory || !description  ||!price || !quantity) {
       Alert.alert("Alert","Please fill all the details.");
       return;
     }
@@ -67,6 +67,11 @@ export default function FormWithDropdown() {
       const { data } = await axios.post(
         `https://farmerapp-6yifrbej.b4a.run/api/product`,requestData
       );
+      setDescription("")
+      setPrice("")
+      setQuantity("")
+      setSelectedFruit(null)
+      setSelectedCategory(null)
       Alert.alert("Item submitted Successfully");
 
       
@@ -81,12 +86,12 @@ export default function FormWithDropdown() {
     <SafeAreaView className="flex-1 bg-[#E8F5E9] p-5">
       <View>
         <View className="w-full">
-          <Text className="text-2xl font-bold mb-5 text-center">
+          <Text className="text-2xl font-pbold mb-5 text-center">
             Add a New Product
           </Text>
 
           {/* Category */}
-          <Text className="text-lg font-medium">Category</Text>
+          <Text className="text-lg font-pmedium">Category</Text>
           <StyledDropDownPicker
             open={openCategory}
             value={selectedCategory}
@@ -114,7 +119,7 @@ export default function FormWithDropdown() {
             }}
           />
 
-          <Text className="text-lg font-medium">Product Name</Text>
+          <Text className="text-lg font-pmedium">Product Name</Text>
           {/* Fruit */}
           <StyledDropDownPicker
             open={openFruit}
@@ -142,13 +147,13 @@ export default function FormWithDropdown() {
             }}
           />
 
-          <Text className="text-lg font-medium">Description</Text>
+          <Text className="text-lg font-pmedium">Description</Text>
           <TextInput
             value={description}
             onChangeText={setDescription}
             placeholder="Enter description"
             multiline={true}
-            className="bg-white p-4 rounded-lg mb-5 text-black text-lg"
+            className="bg-white font-pregular p-4 rounded-lg mb-5 text-black text-lg"
             style={{
               height: 100,
               textAlignVertical: "top",
@@ -157,12 +162,12 @@ export default function FormWithDropdown() {
             }}
           />
 
-          <Text className="text-lg font-medium">Quantity</Text>
+          <Text className="text-lg font-pmedium">Quantity</Text>
           <TextInput
             value={quantity}
             onChangeText={setQuantity}
             placeholder="Enter Your Stock Availability (Kg)"
-            className="bg-white p-4 rounded-lg mb-5 text-black text-lg"
+            className="bg-white p-3 font-pregular rounded-lg mb-5 text-black text-lg"
             keyboardType="numeric"
             style={{
               height: 50,
@@ -172,13 +177,13 @@ export default function FormWithDropdown() {
             }}
           />
 
-          <Text className="text-lg font-medium">Price</Text>
+          <Text className="text-lg font-pmedium">Price</Text>
           <TextInput
             value={price}
             onChangeText={setPrice}
             keyboardType="numeric"
             placeholder="Enter Your Price ₹"
-            className="bg-white p-4 rounded-lg mb-5 text-black text-lg"
+            className="bg-white p-3 font-pregular rounded-lg  mb-5 text-black text-lg"
             style={{
               height: 50,
               textAlignVertical: "top",
@@ -187,13 +192,13 @@ export default function FormWithDropdown() {
             }}
           />
 
-          <Text className="text-lg font-medium">Add Media: Beta</Text>
+          <Text className="text-lg font-pmedium">Add Media: Beta</Text>
 
           <TouchableOpacity
             onPress={handleSubmit}
-            className="bg-[#07C158] p-4 mt-10 rounded-full"
+            className="bg-[#07C158] p-2 font-pregular mt-10 rounded-full"
           >
-            <Text className="text-xl font-bold text-center text-white">
+            <Text className="text-xl font-pmedium text-center text-white">
               Submit
             </Text>
           </TouchableOpacity>

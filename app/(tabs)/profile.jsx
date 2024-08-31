@@ -18,28 +18,28 @@ export default function HomeTab() {
       
   
 
-        <Text className="text-2xl font-extrabold text-center mt-20">Profile Management</Text>
+        <Text className="text-2xl font-pbold text-center mt-10">Profile Management</Text>
 
 
         <View className="flex  ml-10 mr-10">
-          <Text className="text-xl text-gray-400 mt-7">General</Text>
+          <Text className="text-xl text-gray-400 mt-16 font-pmedium">General</Text>
           <View className="flex items-start ml-4 ">
             <View className="flex flex-col  mt-6 ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="user-o" />
-                <Link href="/Dashboard" className="text-xl ml-6">Personal Details</Link>
+                <Link href="/Dashboard" className="text-lg font-pregular ml-6">Personal Details</Link>
               </View>
             </View>
             <View className="flex flex-col mt-6 ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="lock" />
-                <Text className="text-xl ml-6">Change password</Text>
+                <Text className="text-lg ml-6 font-pregular">Change password</Text>
               </View>
             </View>
             <View className="flex flex-col mt-6  ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="globe" />
-                <Text className="text-xl ml-6">Set Language</Text>
+                <Text className="text-lg ml-6 font-pregular">Set Language</Text>
               </View>
             </View>
           </View>
@@ -50,25 +50,25 @@ export default function HomeTab() {
             <View className="flex flex-col  mt-6  ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="question" />
-                <Text className="text-xl ml-6"> Help</Text>
+                <Text className="text-lg ml-6 font-pregular"> Help</Text>
               </View>
             </View>
             <View className="flex flex-col mt-6 ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="phone" />
-                <Text className="text-xl ml-6">Contact Us</Text>
+                <Text className="text-lg ml-6 font-pregular">Contact Us</Text>
               </View>
             </View>
             <View className="flex flex-col mt-6  ">
               <View className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="shield" />
-                <Text className="text-xl ml-6">Privacy Policy</Text>
+                <Text className="text-lg ml-6 font-pregular">Privacy Policy</Text>
               </View>
             </View>
             <View className="flex flex-col mt-6 ">
               <View  className="flex flex-row items-center justify-center">
                 <FontAwesome size={22} name="sign-out" />
-                <Text onPress={()=>router.replace("/signin")} className="text-xl ml-6">Logout</Text>
+                <Text onPress={()=>router.replace("/signin")} className="text-lg ml-6 font-pregular">Logout</Text>
               </View>
             </View>
           </View>

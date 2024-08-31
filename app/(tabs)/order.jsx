@@ -16,7 +16,7 @@ export default function HomeTab() {
     <SafeAreaView className="w-[100vw] h-full bg-[#E8F5E9] ">
       <ScrollView>
 
-      <Text className="text-4xl text-center mt-20">Orders Details</Text>
+      <Text className="text-3xl font-pbold text-center mt-10">Orders Details</Text>
 
       <View className="w-full h-full  p-10">
         <Ordercard/>

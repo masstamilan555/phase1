@@ -43,78 +43,80 @@ export default function HomeTab() {
           resizeMode="cotain"
         />
         <View className=" -mt-5">
-          <View className="flex items-center border-t  border-[#CECECE] w-full h-[76vh] rounded-[30px] bg-[#E8F5E9]">
-            <Text className="text-3xl text-center font-bold m-2">
+          <View className="flex items-center border-t  border-[#CECECE] w-full h-[76vh]  rounded-t-[30px] bg-[#E8F5E9]">
+            <Text className="text-3xl text-center font-pbold m-2">
               Create Account
             </Text>
-            <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw]">
+            <View className="border  border-[#CECECE] font-pregular mt-5 rounded-2xl w-[90vw]">
               <TextInput
                 className="h-10 pl-5 rounded-2xl"
                 placeholder="Full Name"
-                placeholderTextColor="black"
+                placeholderTextColor="#787878"
                 backgroundColor="white"
                 fontSize={18}
               />
             </View>
-            <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
+            <View className="border font-pregular border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
               <TextInput
                 className="h-10 pl-5 rounded-2xl"
                 placeholder="Email Address"
-                placeholderTextColor="black"
+                placeholderTextColor="#787878"
                 backgroundColor="white"
                 fontSize={18}
               />
             </View>
-            <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
+            <View className="border font-pregular  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
               <TextInput
                 className="h-10 pl-5 rounded-2xl"
                 placeholder="Phone Number"
-                placeholderTextColor="black"
+                placeholderTextColor="#787878"
                 backgroundColor="white"
                 fontSize={18}
               />
             </View>
-            <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
+            <View className="border font-pregular border-[#CECECE]  mt-5 rounded-2xl w-[90vw] ">
               <TextInput
                 className="h-10 pl-5 rounded-2xl"
                 placeholder="Password"
-                placeholderTextColor="black"
+                placeholderTextColor="#787878"
                 backgroundColor="white"
                 fontSize={18}
               />
             </View>
-            <View className="border  border-[#CECECE]  mt-5 rounded-2xl w-[90vw]">
+            <View className="border font-pregular border-[#CECECE]  mt-5 rounded-2xl w-[90vw]">
               <TextInput
                 className="h-10 pl-5 rounded-2xl"
                 placeholder="Confirm Password"
-                placeholderTextColor="black"
+                placeholderTextColor="#787878"
                 backgroundColor="white"
                 fontSize={18}
               />
             </View>
 
-            <View className="mt-3 ">
+            <View className="mt-3 font-pmedium ">
               <RadioGroup
+              
                 layout="row"
                 radioButtons={radioButtons}
                 onPress={setSelectedId}
                 selectedId={selectedId}
+                
               />
             </View>
 
             <TouchableOpacity
               onPress={() => {
-                router.replace("/home");
+                router.replace("/forget");
               }}
-              className="w-[80vw] h-10 px-4 mt-5 bg-[#07C158] rounded-full"
+              className="w-[70vw] h-10 px-4 mt-5 bg-[#07C158] rounded-full"
             >
-              <View className="flex flex-row justify-end">
-                <Text className="text-2xl pt-2 font-extrabold text-center pr-[110px]">
-                  Signup
+              <View className="">
+                <Text className="text-white text-2xl pt-2 font-extrabold text-center">
+                  Next
                 </Text>
               </View>
             </TouchableOpacity>
-            <View className="p-5">
+            <View className="p-5 font-pregular">
               <Text className="pr-5">
                 Already have an account{" "}
                 <Link

@@ -15,7 +15,7 @@ const index = () => {
         resizeMode="cover"
       >
 
-        <Text className="text-3xl mt-10 text-white font-bold text-center">Welcome to fresh farm</Text>
+        <Text className="text-3xl mt-10 text-white font-bold text-center font-pbold">Welcome To Fresh Farm</Text>
 
 
 
@@ -24,7 +24,7 @@ const index = () => {
             router.push("/signin")
           }} className="w-[60vw] h-10 px-4 mt-[80vh] bg-[#07C158] rounded-full">
             <View className="flex flex-row justify-end">
-              <Text className=" text-2xl font-extrabold text-center mr-[20px] pt-1 text-white">Get Started</Text>
+              <Text className=" text-2xl font-extrabold text-center mr-[20px] pt-1 text-white font-pbold">Get Started</Text>
               <View className="p-3 pr-0 flex flex-row">
                 <FontAwesome size={18} name="chevron-right" />
                 <FontAwesome size={18} name="chevron-right" />
@@ -34,7 +34,7 @@ const index = () => {
           </TouchableOpacity>
         </View>
       </ImageBackground>
-      <StatusBar backgroundColor="#161622" style="light" />
+      <StatusBar backgroundColor="green" style="light" />
     </SafeAreaView>
   )
 }

@@ -74,12 +74,12 @@ export default function Forget() {
         />
         <View className="">
           <View className="h-[100vh] pt-10 bg-[#E8F5E9] rounded-2xl -mt-2">
-            <Text className="text-2xl font-extrabold underline text-center">
+            <Text className="text-2xl font-pbold underline text-center">
               Verify Email
             </Text>
 
             <View className="p-5">
-              <Text className="pr-5 text-xl text-black ">
+              <Text className="text-center text-xl text-black ">
                 Code sent to{" "}
                 <Link
                   href="https://mail.google.com/mail/u/0/#inbox"
@@ -108,7 +108,7 @@ export default function Forget() {
             </View>
 
             <View className=" pl-[125] flex flex-row">
-              <Text className="pr-1 text-2xl font-bold">Try again in </Text>
+              <Text className="pr-1 text-2xl font-pregular">Try again in </Text>
               <Text className=" text-2xl underline text-green-500">{`${Math.floor(
                 timer / 60
               )}:${timer % 60 < 10 ? `0${timer % 60}` : timer % 60}`}</Text>
@@ -118,8 +118,8 @@ export default function Forget() {
               <Text
                 onPress={handleRestart}
                 className={`${
-                  isDisabled ? "text-gray-500" : "text-black"
-                }  text-2xl font-extrabold`}
+                  isDisabled ? "text-gray-500 font-pregular" : "text-black"
+                }  text-2xl font-pbold `}
                 disabled={isDisabled} // Disable the button when the timer is running
               >
                 Resend
@@ -129,9 +129,9 @@ export default function Forget() {
             <View className="flex items-center mt-5">
               <TouchableOpacity className="w-[75vw] h-10 px-4 bg-[#07C158] rounded-xl">
                 <View className="">
-                  <Text className="text-2xl p-1 text-white font-extrabold text-center">
+                  <Link href="/home" className="text-2xl p-1 text-white font-pbold text-center">
                     Verify
-                  </Text>
+                  </Link>
                 </View>
               </TouchableOpacity>
             </View>

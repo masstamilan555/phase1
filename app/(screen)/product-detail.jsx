@@ -61,7 +61,7 @@ export default function HomeTab() {
 
   return (
     <SafeAreaView className="w-full h-full bg-[#E8F5E9] flex flex-col items-center">
-      <Text className="text-3xl font-extrabold text-center mt-10">Product Detail</Text>
+      <Text className="text-3xl font-pbold text-center mt-10">Product Detail</Text>
       <View className="flex flex-col items-center h-[100px] mt-10">
         <View className="bg-[#A5D6A7] p-20 pt-10 pb-10 rounded-2xl shadow-xl shadow-black">
           <View className=" shadow-2xl shadow-black rounded-full">
@@ -80,7 +80,7 @@ export default function HomeTab() {
 
         <View className="m-5 mt-0">
           <Text className="text-gray-700 text-xl font-semibold ml-[-20px]">Description:</Text>
-          <Text className="text-gray-600 text-start tracking-wide mt-2">
+          <Text className="text-gray-600 text-start tracking-wide mt-2 font-bold">
             Fresh, vine-ripened tomatoes delivered straight from local farmers
             to your doorstep. Enjoy the vibrant taste and rich nutrition of
             farm-to-table produce.

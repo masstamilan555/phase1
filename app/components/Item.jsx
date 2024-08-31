@@ -12,14 +12,14 @@ const Item = ({ name, url, price, quantity ,productId }) => {
       navigation.navigate('product-detail',[productId])
 
     }} className="mb-1 bg-[#A5D6A7] rounded-2xl ">
-      <View className="w-[90vw] h-[100px] p-3 flex flex-row justify-between ">
-        <View>
-          <Text className="text-black text-2xl font-extrabold ">{name}</Text>
-          <Text className="text-[#FF7506] text-xl">
+      <View className="w-[90vw] h-[100px] p-2 flex flex-row justify-between ">
+        <View className="p-1">
+          <Text className="text-black text-xl font-pbold ">{name}</Text>
+          <Text className="text-[#FF7506] text-md font-pmedium">
             Quantity: {quantity} kg
           </Text>
-          <Text className="text-[#0E6507] text-xl">
-            Price: ₹{price} <Text className="text-black text-lg">per (KG)</Text>
+          <Text className="text-[#0E6507] text-lg font-pregular">
+            Price: ₹{price} <Text className="text-black text-lg">per (Kg)</Text>
           </Text>
         </View>
         <View>
